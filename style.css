@@ -20,7 +20,7 @@ Use it to make something cool, have fun, and share what you've learned.
   font-family: "Bedel";
   src: url("assets/fonts/Bedel_Basic.otf");
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @font-face {
@@ -34,7 +34,7 @@ Use it to make something cool, have fun, and share what you've learned.
   font-family: "Bedel";
   src: url("assets/fonts/Bedel_Black.otf");
   font-style: normal;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 @font-face {
@@ -86,12 +86,10 @@ Use it to make something cool, have fun, and share what you've learned.
   font-weight: 800;
 }
 
-
-
 body {
-  font-family: "Raleway";
-  font-weight: 400;
-  font-size: 20px;
+  font-family: "Neue";
+  font-weight: 500;
+  font-size: 1rem;
   color: #0E1F43;
 }
 
@@ -129,57 +127,13 @@ a:hover {
   margin: 0 30px;
 }
 
-footer a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-}
-
-footer a:hover,
-footer a:active,
-footer a:focus {
-  color: rgba(255, 255, 255, 0.75);
-  text-decoration: underline;
-}
-
-.footer {
-  background-color: #0d1d44;
-  padding: 4rem 0;
-}
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  font-size: 15px;
   color: #fff;
   margin-right: 20px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:last-child {
-  margin-right: 0px;
-}
-
-.footer p {
-  font-size: 10px;
-  margin-bottom: 0;
-}
-
-.footer .footer-title {
-  font-size: 14px;
-  font-weight: normal;
-  font-family: "SangBleuKing";
-}
-
-.footer .social-links a:hover,
-.footer .social-links a:hover i {
-  border-color: #0062FF;
-  color: #0062FF;
-  text-decoration: none;
 }
 
 .section-front {
@@ -269,28 +223,43 @@ border-radius: 4px;
 } */
 
 .section-title {
+  font-family: "Bedel";
+  font-weight: 900;
+  font-size: 2.25rem;
+  line-height: 2.55rem;
+  color: #025F9E;
+  padding-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.55rem;
+  padding-bottom: 20px;
+  font-family: "Neue";
+  font-weight: 500;
+}
+
+.section-front .section-title {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.61);
   color: #fff;
   font-size: 70px;
   line-height: 70px;
   padding-bottom: 20px;
   font-family: "Bedel";
-  font-weight: 800;
+  font-weight: 900;
 }
 
-.section-front .section-title {
+.section-front .section-subtitle {
+  font-family: "Neue";
+  font-weight: 400;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.61);
-}
-
-.section-subtitle {
   color: #fff;
   font-size: 30px;
   line-height: 30px;
 }
 
-.section-front .section-subtitle {
-  font-family: "Neue";
-  font-weight: 500;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.61);
+.section-clientes .col {
+  padding-bottom: 40px;
 }
 
 .ia-container-title {
@@ -386,6 +355,52 @@ border-radius: 4px;
 
 .carousel-proyectos {}
 
+.section-video {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  box-shadow: inset 0 0 0 1000px rgba(236, 238, 239, 90%)
+}
+
+footer {
+  color: #fff;
+}
+
+.footer-top {
+  background: #025F9E;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-top ul {
+  padding-left: 0;
+}
+
+.footer-top ul li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer-bottom {
+  background: #07011D;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+  border-top: 1px solid;
+  opacity: 1;
+}
+
+.footer-title {
+  color: #FBC00E;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
 
 /* @media (min-width: 576px) {
   .container-fluid-right {

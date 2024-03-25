@@ -168,6 +168,38 @@ get_header();
     </div>
   </div>
 </section>
+<section class="section-rumi section-clientes">
+  <div class="container">
+    <div class="row text-center">
+      <p class="section-title">GRANDES RESULTADOS HACEN QUE </br> NOS ELIJAN</p>
+      <p class="section-subtitle">Empresas que han confiando en nosotros para dar inicios a sus trabajos</p>
+    </div>
+    <div class="row row-cols-3 row-cols-md-5 justify-content-center align-items-center mt-5">
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_01.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_02.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_03.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_04.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_05.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_01.png" alt="" class="img-fluid"></div>
+      <div class="col text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cliente_04.png" alt="" class="img-fluid"></div>
+    </div>
+  </div>
+</section>
+<section class="section-rumi section-video" style="background:url('<?php echo get_template_directory_uri(); ?>/assets/images/bg-image-popup.jpg') center no-repeat; background-size:cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/video-img-popup-logo-min.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <p class="section-title">UNIÓN QUE PERDURA PARA CONSTRUIR LOS SUEÑOS DE UN PAÍS</p>
+        <p>Somos una empresa ubicada al sur de Lima dedicada a suministrar eficazmente en tiempo y forma concreto premezclado de alta calidad, cumpliendo con las normas internacionales y la norma nacional; brindando seguridad y garantía en la construcción de miles de proyectos. </p>
+        <p>Teniendo claro nuestra visión y enfoque de potenciar la construcción de proyectos de larga duración, garantizando la inversión de nuestros clientes.</p>
+        <button class="btn btn-rumi mt-3 mt-md-5">CONÓCENOS</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php
 get_footer();
