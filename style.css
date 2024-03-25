@@ -1,0 +1,469 @@
+/*!
+Theme Name: seed
+Theme URI: http://underscores.me/
+Author: Max Manuel
+Author URI: https://maxmanuel.com/
+Description: Tema semilla basado en Underscores
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: seed
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: "Bedel";
+  src: url("assets/fonts/Bedel_Basic.otf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Bedel";
+  src: url("assets/fonts/Bedel_Bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Bedel";
+  src: url("assets/fonts/Bedel_Black.otf");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Bedel-Cut";
+  src: url("assets/fonts/Bedel_Bold_Cut.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-Light.woff2");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-DemiBold.woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("assets/fonts/TTSupermolotNeue-ExtraBold.woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+
+
+
+body {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 20px;
+  color: #0E1F43;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.navbar-toggler {
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  font-family: "Bedel";
+  font-weight: 700;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-up {
+  background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+#navbarNav .nav-item {
+  margin: 0 30px;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:active,
+footer a:focus {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #0d1d44;
+  padding: 4rem 0;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  font-size: 15px;
+  color: #fff;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:last-child {
+  margin-right: 0px;
+}
+
+.footer p {
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.footer .footer-title {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "SangBleuKing";
+}
+
+.footer .social-links a:hover,
+.footer .social-links a:hover i {
+  border-color: #0062FF;
+  color: #0062FF;
+  text-decoration: none;
+}
+
+.section-front {
+  min-height: 800px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 13%)
+}
+
+.section-page {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.section-page .section-title {
+  position: relative;
+  z-index: 99;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.247), rgba(0, 0, 255, 0));
+  /* Degradado azul de izquierda a derecha */
+  pointer-events: none;
+  /* Permite hacer clic a través de la capa de superposición */
+  z-index: 1;
+}
+
+.btn-rumi {
+  padding: 20px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-family: "Bedel-Cut";
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 0;
+  letter-spacing: 2px;
+}
+
+.section-rumi {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section-front .btn-rumi {
+  font-size: 1.125rem;
+}
+
+.section-front .btn-rumi--blue {
+  background: #025F9EE6;
+}
+
+.btn-rumi--blue {
+  background: #025F9E;
+  color: #fff;
+}
+
+.btn-rumi--yellow {
+  background: #FBC00E;
+  color: #333A46;
+}
+
+/* .btn-grad {
+  background-image: linear-gradient(to right, #00E785 0%, #0062FF 51%, #00E785 100%);
+  padding: 20px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 800;
+  box-shadow: 0 0 20px #eee;
+border-radius: 4px;
+}
+
+*/
+/* .btn-grad:hover {
+  background-position: right center;
+  text-decoration: none;
+} */
+
+.section-title {
+  color: #fff;
+  font-size: 70px;
+  line-height: 70px;
+  padding-bottom: 20px;
+  font-family: "Bedel";
+  font-weight: 800;
+}
+
+.section-front .section-title {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.61);
+}
+
+.section-subtitle {
+  color: #fff;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.section-front .section-subtitle {
+  font-family: "Neue";
+  font-weight: 500;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.61);
+}
+
+.ia-container-title {
+  color: #0066FF;
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 700;
+  text-align: center !important;
+  z-index: 1;
+}
+
+.linea {
+  position: relative;
+  z-index: 1;
+}
+
+.linea:before {
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+  border-image: linear-gradient(to right, #00E785, #0062FF) 30;
+  border-width: 3px 0 0 0;
+  border-style: solid;
+}
+
+.linea span {
+  background: #fff;
+  padding: 0 15px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-rumi {
+  width: 274px;
+  height: 366px;
+  border: 1px solid #eee;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  justify-content: end;
+  left: 0;
+  margin-top: 0;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: initial;
+  border: 1px solid;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.swiper-button-next {
+  margin-left: 20px;
+}
+
+.carousel-tipos .btn-rumi {
+  padding: 10px 20px;
+  border: 1px solid #025F9E;
+}
+
+.carousel-tipos .btn-rumi:hover,
+.carousel-tipos .btn-rumi:active {
+  background-color: #025F9E;
+  color: #fff;
+}
+
+.carousel-proyectos {}
+
+
+/* @media (min-width: 576px) {
+  .container-fluid-right {
+    max-width: calc(100% - (100% - 540px) / 2);
+  }
+    .container-fluid-left {
+      max-width: calc(100% - (100% - 540px) / 2);
+    }
+}
+
+@media (min-width: 768px) {
+  .container-fluid-right {
+    max-width: calc(100% - (100% - 720px) / 2);
+  }
+    .container-fluid-left {
+      max-width: calc(100% - (100% - 720px) / 2);
+    }
+} */
+
+@media (min-width: 992px) {
+  .container-fluid-right {
+    max-width: calc(100% - (100% - 960px) / 2);
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .container-fluid-right .row {
+    margin-right: 0;
+
+    >[class*=' col-']:last-child,
+    >[class^='col-']:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .container-fluid-left {
+    max-width: calc(100% - (100% - 960px) / 2);
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .container-fluid-left .row {
+    margin-left: 0;
+
+    >[class*=' col-']:last-child,
+    >[class^='col-']:last-child {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid-right {
+    max-width: calc(100% - (100% - 1200px) / 2);
+  }
+
+  .container-fluid-left {
+    max-width: calc(100% - (100% - 1200px) / 2);
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-fluid-right {
+    max-width: calc(100% - (100% - 1320px) / 2);
+  }
+
+  .container-fluid-left {
+    max-width: calc(100% - (100% - 1320px) / 2);
+  }
+}
+
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:991px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 380px) {}
