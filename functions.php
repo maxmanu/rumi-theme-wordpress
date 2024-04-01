@@ -144,7 +144,8 @@ add_action('widgets_init', 'seed_widgets_init');
 function seed_scripts()
 {
   wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
-  // wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+  wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+  wp_enqueue_style('slick-theme-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
   wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
   wp_enqueue_style('seed-style', get_stylesheet_uri(), array(), _S_VERSION);
   wp_style_add_data('seed-style', 'rtl', 'replace');
@@ -153,7 +154,9 @@ function seed_scripts()
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
-  wp_enqueue_script('jsbootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', '', '', true);
+  wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', '', '', true);
+  wp_enqueue_script('jquery-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', '', '', true);
+  wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', '', '', true);
   wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', '', '', true);
   wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', '', '', true);
 }
@@ -190,6 +193,30 @@ if (defined('JETPACK__VERSION')) {
 add_action('admin_menu', function () {
   remove_menu_page('edit-comments.php');
 });
+
+// Remove comments widget on topadminbar
+function remove_comments()
+{
+  global $wp_admin_bar;
+  $wp_admin_bar->remove_menu('comments');
+}
+add_action('wp_before_admin_bar_render', 'remove_comments');
+
+// Remove comments column on pages list
+function remove_pages_count_columns($defaults)
+{
+  unset($defaults['comments']);
+  return $defaults;
+}
+add_filter('manage_pages_columns', 'remove_pages_count_columns');
+
+// Remove comments column on posts list
+function remove_posts_count_columns($defaults)
+{
+  unset($defaults['comments']);
+  return $defaults;
+}
+add_filter('manage_posts_columns', 'remove_posts_count_columns');
 
 // Remove Categories and Tags
 add_action('init', 'myprefix_remove_tax');

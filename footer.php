@@ -15,7 +15,7 @@
 <!-- Footer-->
 <footer class="footer">
   <div class="footer-top">
-    <div class="container px-5">
+    <div class="container">
       <div class="row">
         <div class="col">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="" class="img-fluid">
@@ -101,11 +101,30 @@
     </div>
   </div>
   <div class="footer-bottom text-center">
-    <span>2023 © Rumi Concretos. Todos los derechos reservados | Diseñado por <a href="https://www.obi-consulting.com/" target="_blank">Obi Consulting</a></span>
+    <span>2024 © Rumi Concretos. Todos los derechos reservados | Diseñado por <a href="https://www.obi.com.pe/" target="_blank">Obi Consulting</a></span>
   </div>
 </footer>
 
 <?php wp_footer(); ?>
+
+<?php if (is_front_page()) { ?>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navbar = document.getElementById("navbar");
+
+      window.onscroll = function() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          navbar.style.backgroundColor = "#000000b3"; // Cambia el color de fondo al hacer scroll
+        } else {
+          navbar.style.backgroundColor = "#00000000"; // Restaura el color original cuando se desplaza hacia arriba
+        }
+      };
+    });
+  </script>
+<?php } ?>
 
 </body>
 

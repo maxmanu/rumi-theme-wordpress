@@ -1,6 +1,7 @@
 <?php
 get_header();
 ?>
+
 <section class="section-front d-flex align-items-center" style="background:url('<?php echo get_template_directory_uri(); ?>/assets/images/bg-home.jpg') center no-repeat; background-size:cover;">
   <div class="container">
     <div class="row text-center">
@@ -15,7 +16,7 @@ get_header();
     </div>
   </div>
 </section>
-<section class="section-rumi carousel-tipos">
+<section class="section-rumi carousel-tipos carousel-arrows-bottom">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -66,7 +67,7 @@ get_header();
     </div>
   </div>
 </section>
-<section class="section-rumi carousel-proyectos" style="background:url('<?php echo get_template_directory_uri(); ?>/assets/images/bg-carousel-proyectos.jpg') center no-repeat; background-size:cover;">
+<section class="section-rumi carousel-proyectos carousel-arrows-bottom" style="background:url('<?php echo get_template_directory_uri(); ?>/assets/images/bg-carousel-proyectos.jpg') center no-repeat; background-size:cover;">
   <div class="container container-fluid-right">
     <div class="row">
       <div class="col-md-3">
@@ -117,7 +118,7 @@ get_header();
     </div>
   </div>
 </section>
-<section class="section-rumi carousel-tipos">
+<section class="section-rumi carousel-tipos carousel-arrows-bottom">
   <div class="container container-fluid-left">
     <div class="row">
       <div class="col-md-9 position-relative">
