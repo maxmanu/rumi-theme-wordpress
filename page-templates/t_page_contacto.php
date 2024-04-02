@@ -69,7 +69,19 @@ get_header();
       <div class="col-md-7 col-right-hero-page">
         <div class="row">
           <div class="col-xl-6 offset-xl-1 me-auto">
+            <p>QUIERO CONTACTARME</p>
+            <p>Selecciona:</p>
             <form class="row pt-0 g-3">
+              <div class="col-12">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+              </div>
               <div class="col-12">
                 <input type="text" placeholder="Nombre y apellido" class="form-control" id="">
               </div>
